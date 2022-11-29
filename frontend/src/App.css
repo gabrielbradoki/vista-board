@@ -1,0 +1,24 @@
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#right {
+  position: relative;
+  left: 0;
+  transition: left 0.4s;
+}
+
+.top-right {
+  flex-shrink: 0;
+  display: flex;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+}
+
+.bottom {
+  margin-top: 50px;
+  margin-left: 95px;
+}
