@@ -4,8 +4,6 @@ import { columnsFromBackend } from '../../services/api';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import TaskCard from '../Card/index';
 
-
-
 const Kanban = () => {
   const [columns, setColumns] = useState(columnsFromBackend);
 
