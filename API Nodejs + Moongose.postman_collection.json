@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "37cf0f0e-8285-41b6-9a48-f37c66e31c1c",
+		"name": "API Nodejs + Moongose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7306740"
+	},
+	"item": [
+		{
+			"name": "Criação Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": \"1\",\n\"Code\": \"#12345\",\n\"Flag\": \"Desenvolvimento\",\n\"Task\": \"Criar Migration\",\n\"Project\": \"Company\",\n\"Description\": \"Usar a branch master, fazer pull, após isso...\",\n\"Time_Foreseen\": \"00:30\",\n\"Time_Balance\": \"+00:30\",\n\"Situation\": \"Em dia\",\n\"Team\": [\n    { \"member\": \"AS\"},\n    { \"member\": \"PH\"},\n    { \"member\": \"WC\"}\n],\n\"Due_Date\": \"2021-12-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/board",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperação Card",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"flag\":\"Financeiro\",\n      \"titulo\":\"Lançar Notas\",\n      \"projeto\":\"Company\",\n      \"previsaoDeTermino\": \"ISODate('2031-12-30T23:59:00Z')\",\n      \"descricao\":\"Selecionar notas fiscais, lançar no ERP\",\n      \"codigo\":\"#12345\",\n      \"equipe\":\"TF\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/board",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"flag\":\"Financeiro\",\n      \"titulo\":\"Lançar Notas\",\n      \"projeto\":\"Company\",\n      \"previsaoDeTermino\": \"ISODate('2031-12-30T23:59:00Z')\",\n      \"descricao\":\"Selecionar notas fiscais, lançar no ERP\",\n      \"codigo\":\"#12345\",\n      \"equipe\":\"TF\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/board/637becf22b154ec9edf2f3a2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"board",
+						"637becf22b154ec9edf2f3a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Carlos\",\n    \"email\": \"gabrieel.arauj@gmail.com\",\n    \"password\": \"teste@123\",\n    \"confirmpassword\": \"teste@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/auth/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"gabrieel.arauj@gmail.com\",\n    \"password\": \"teste@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/auth/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzN2JmYzljYzllOTVmMzRiMmRlZjQ5MSIsImlhdCI6MTY2OTA3MDY1MX0.9s6t1Uv70HjMyZs5XAYRbwlMPcgJao4U1LVgXyYMje4",
+			"type": "string"
+		}
+	]
+}

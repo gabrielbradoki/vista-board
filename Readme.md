@@ -30,3 +30,5 @@
 [ExpressJs](https://expressjs.com/pt-br/)
 
 [Mongodb Atlas](https://account.mongodb.com/account/login)
+
+[Collection Postman](./API%20Nodejs%20%2B%20Moongose.postman_collection.json)
