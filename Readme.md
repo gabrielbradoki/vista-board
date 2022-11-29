@@ -2,7 +2,7 @@
 
 - Como iniciar o Banckend (Mongoose)
 - Entre na pasta backend
-- Execute o `npm install ou yarn install`
+- Execute `npm install ou yarn install`
 - Rode o projeto com o comando `npm start ou yarn start`
 
 
@@ -10,7 +10,7 @@
 
 - Como iniciar o Frontend (React)
 - Entre na pasta frontend
-- Execute o `npm install ou yarn install`
+- Execute `npm install ou yarn install`
 - Rode o projeto com o comando `npm start ou yarn start`
 
 
